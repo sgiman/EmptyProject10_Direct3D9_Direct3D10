@@ -152,7 +152,7 @@ int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdL
     _CrtSetDbgFlag( _CRTDBG_ALLOC_MEM_DF | _CRTDBG_LEAK_CHECK_DF );
 #endif
 
-	// DXUT создаст и использует лучшее устройство (либо D3D9, либо D3D10)
+    // DXUT создаст и использует лучшее устройство (либо D3D9, либо D3D10)
     // который доступен в системе в зависимости от того, какие обратные вызовы D3D установлены ниже
 
     // Установить общие обратные вызовы DXUT
@@ -164,7 +164,7 @@ int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdL
     DXUTSetCallbackDeviceRemoved( OnDeviceRemoved );
 
     // Установить обратные вызовы D3D9 DXUT. 
-	// Удалить эти наборы, если приложению не требуется поддержка D3D9.
+    // Удалить эти наборы, если приложению не требуется поддержка D3D9.
     DXUTSetCallbackD3D9DeviceAcceptable( IsD3D9DeviceAcceptable );
     DXUTSetCallbackD3D9DeviceCreated( OnD3D9CreateDevice );
     DXUTSetCallbackD3D9DeviceReset( OnD3D9ResetDevice );
@@ -172,8 +172,8 @@ int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdL
     DXUTSetCallbackD3D9DeviceLost( OnD3D9LostDevice );
     DXUTSetCallbackD3D9DeviceDestroyed( OnD3D9DestroyDevice );
 
-	// Установить обратные вызовы D3D10 DXUT. 
-	// Удалить эти наборы, если приложению не требуется поддержка D3D10.
+    // Установить обратные вызовы D3D10 DXUT. 
+    // Удалить эти наборы, если приложению не требуется поддержка D3D10.
     DXUTSetCallbackD3D10DeviceAcceptable( IsD3D10DeviceAcceptable );
     DXUTSetCallbackD3D10DeviceCreated( OnD3D10CreateDevice );
     DXUTSetCallbackD3D10SwapChainResized( OnD3D10ResizedSwapChain );
@@ -181,13 +181,13 @@ int WINAPI wWinMain( HINSTANCE hInstance, HINSTANCE hPrevInstance, LPWSTR lpCmdL
     DXUTSetCallbackD3D10SwapChainReleasing( OnD3D10ReleasingSwapChain );
     DXUTSetCallbackD3D10DeviceDestroyed( OnD3D10DestroyDevice );
 
-	// Здесь выполняем любую инициализацию на уровне приложения
+    // Здесь выполняем любую инициализацию на уровне приложения
 
-    DXUTInit( true, true, NULL ); 			// Разобрать командную строку, показать msgbox при ошибке, без дополнительных параметров командной строки
+    DXUTInit( true, true, NULL ); 		// Разобрать командную строку, показать msgbox при ошибке, без дополнительных параметров командной строки
     DXUTSetCursorSettings( true, true ); 	// Показывать курсор и обрезать его в полноэкранном режиме
     DXUTCreateWindow( L"EmptyProject10" );
     DXUTCreateDevice( true, 640, 480 );
-    DXUTMainLoop(); 						// Войти в цикл рендеринга DXUT
+    DXUTMainLoop(); 				// Войти в цикл рендеринга DXUT
 
     // Выполните любую очистку на уровне приложения здесь
 
